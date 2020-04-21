@@ -1,0 +1,233 @@
+@media only screen and (min-device-width: 1280px) and (orientation: portrait) {
+    // font-size: 9px;
+}
+
+@media only screen and (min-device-width: 800px) and (orientation: landscape) {
+    // font-size: 9px;
+}
+
+@media only screen and (min-device-width: 1440px) and (orientation: portrait) {
+    // font-size: 9px;
+}
+
+@media only screen and (min-device-width: 900px) and (orientation: landscape) {
+    // font-size: 9px;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Muli', sans-serif;
+}
+
+a {
+    @include transition;
+}
+
+ul,
+ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* -- import Bootstrap v4 --------------------------- */
+/* -- import Bootstrap docs ------------------------- */
+/* -- Body style ------------------------------------ */
+
+html {
+    overflow-x: hidden;
+    height: 100%;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-size: 1rem;
+    background: $bg-white;
+    height: 100%;
+}
+.row{margin-left: 0px !important;margin-right: 0px !important;}
+.fs14 {
+    font-size: 0.875rem;
+}
+
+.fs16 {
+    font-size: 1rem;
+}
+
+.fs22 {
+    font-size: 1.375rem;
+}
+
+.fs24 {
+    font-size: 1.5rem;
+}
+
+.fs36 {
+    font-size: 2.25rem;
+}
+
+.fs60 {
+    font-size: 3.75rem;
+}
+
+.lh55 {
+    line-height: 55px !important;
+}
+
+.mt50 {
+    margin-top: 50px;
+}
+
+.mt80 {
+    margin-top: 80px;
+}
+
+
+/*scroll to top*/
+
+.scroll_top {
+    display: none;
+
+    i {
+        font-size: 24px;
+    }
+
+    a {
+        &:hover {
+            transition: all 0.5s ease-in-out 0s;
+        }
+    }
+}
+
+.scrollToTop {
+    z-index: 5;
+    text-decoration: none;
+    position: fixed;
+    bottom: 27%;
+    right: 9%;
+    display: none;
+    background-color:$bg-purple;
+    color:$text-white;
+    width:46px;
+    height:46px;
+    line-height: 55px;
+    border-radius: 50%;
+
+    &:hover {
+        text-decoration: none;
+        background-color:$bg-purple;
+        color:$text-white;
+    }
+}
+
+@font-face {
+    font-family: 'Font Awesome 5 Brands';
+    font-style: normal;
+    font-weight: 400;
+    font-display: auto;
+    src: url("../fonts/fa-brands-400.eot");
+    src: url("../fonts/fa-brands-400.eot?#iefix") format("embedded-opentype"), url("../fonts/fa-brands-400.woff2") format("woff2"), url("../fonts/fa-brands-400.woff") format("woff"), url("../fonts/fa-brands-400.ttf") format("truetype"), url("../fonts/fa-brands-400.svg#fontawesome") format("svg");
+}
+
+.fab {
+    font-family: 'Font Awesome 5 Brands';
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Font Awesome 5 Free';
+    font-style: normal;
+    font-weight: 400;
+    font-display: auto;
+    src: url("../fonts/fa-regular-400.eot");
+    src: url("../fonts/fa-regular-400.eot?#iefix") format("embedded-opentype"), url("../fonts/fa-regular-400.woff2") format("woff2"), url("../fonts/fa-regular-400.woff") format("woff"), url("../fonts/fa-regular-400.ttf") format("truetype"), url("../fonts/fa-regular-400.svg#fontawesome") format("svg");
+}
+
+.far {
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Font Awesome 5 Free';
+    font-style: normal;
+    font-weight: 900;
+    font-display: auto;
+    src: url("../fonts/fa-solid-900.eot");
+    src: url("../fonts/fa-solid-900.eot?#iefix") format("embedded-opentype"), url("../fonts/fa-solid-900.woff2") format("woff2"), url("../fonts/fa-solid-900.woff") format("woff"), url("../fonts/fa-solid-900.ttf") format("truetype"), url("../fonts/fa-solid-900.svg#fontawesome") format("svg");
+}
+
+.fa,
+.fas {
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+}
+
+
+/* The check */
+.check {
+    display: block;
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 12px;
+    padding-right: 15px;
+    cursor: pointer;
+    font-size: 18px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    /* Hide the browser's default checkbox */
+    input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        &:checked ~ .checkmark{
+            background-color: #fff  ;
+            &:after{
+            display: block;
+            }
+        }
+    }
+   .checkmark{
+       &:after {
+        left: 5px;
+        top: 1px;
+        width: 5px;
+        height: 10px;
+        border: solid ;
+        border-color:#f8204f;
+        border-width: 0 3px 3px 0;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+}
+
+}
+
+/* Create a custom checkbox */
+.checkmark {
+    position: absolute;
+    top: 3px;
+    left: 0;
+    height: 18px;
+    width: 18px;
+    background-color: #fff ;
+    border-color:#f8204f;
+    border-style:solid;
+    border-width:2px;
+    /* Create the checkmark/indicator (hidden when not checked) */
+    &:after {
+        content: "";
+        position: absolute;
+        display: none;
+    }
+}

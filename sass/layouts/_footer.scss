@@ -1,0 +1,12 @@
+//Footer
+footer {
+    background-color: $bg-purple;
+
+    p {
+        color: $text-white;
+        @include media-breakpoint-down(md) {
+            margin-bottom: 20px;
+            line-height: normal;
+        }
+    }
+}

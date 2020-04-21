@@ -1,0 +1,40 @@
+.corona-updates{
+    margin:0 0 30px 0;
+    h3{
+        color:$light-red;
+    }
+    h1{
+        font-size:2rem;
+        text-align:center;
+    }
+}
+.sub-section{
+    background-color: $bg-offwhite;
+}
+
+
+@media(max-width:768px){
+    .main-header{
+        height: 700px;
+        text-align: center;
+        padding-top:70px;
+        h1{
+            text-align: center;
+            padding: 0;
+            width:100%;
+            font-size: 30px !important;
+        }
+    }
+    .corona-updates .d-flex{
+        flex-direction: column;
+    }
+    
+    .section-header h1{
+        font-size: 2rem;
+    }
+    .sympt1{
+        clear:both;
+        width:100%;
+    }
+    
+}
