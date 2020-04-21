@@ -74,23 +74,7 @@
             covid-19 Live updates of the world
         </h3>
     </div>
-    <div class="table-responsive">
-      <table class="table table-bordered table-striped text-center" id="tbval">
-        <thead>
-          <tr>
-            <th>Country</th>
-            <th>TotalConfirmed</th>
-            <th>TotalRecovered</th>
-            <th>TotalDeaths</th>
-            <th>NewConfirmed</th>
-            <th>NewRecovered</th>
-            <th>NewDeaths</th>
-        </tr>
-        </thead>
-      </table>
-
-    </div>
-    <!-- <div class="d-flex justify-content-around align-items-center">
+    <div class="d-flex justify-content-around align-items-center">
         <div>
             <h1 class="count">1524266</h1>
             <p>Passenger screen at airport</p>
@@ -107,7 +91,7 @@
             <h1 class="count">9</h1>
             <p>Death Cases</p>
         </div>
-    </div> -->
+    </div>
 </section>
 <!-- About CORONA Virus -->
 <section>
@@ -374,86 +358,6 @@
         });
     });
 </script>
-
-<script>
-function fetch(){
-    $.get("https://api.covid19api.com/summary",
-        function (data){
-            //console.log(data['Countries'].length);
-            var tbval = document.getElementById('tbval');
-
-            for(i=1; i<(data['Countries'].length); i++){
-                var x = tbval.insertRow();
-               
-                x.insertCell(0);
-                tbval.rows[i].cells[0].innerHTML= data['Countries'][i-1]['Country'];
-                tbval.rows[i].cells[0].style.background='#7a4a91';
-                tbval.rows[i].cells[0].style.color='#ffffff';
-
-                x.insertCell(1);
-                tbval.rows[i].cells[1].innerHTML= data['Countries'][i-1]['TotalConfirmed'];
-                tbval.rows[i].cells[1].style.background='#4bb7d8';
-
-                x.insertCell(2);
-                tbval.rows[i].cells[2].innerHTML= data['Countries'][i-1]['TotalRecovered'];
-                tbval.rows[i].cells[2].style.background='#9cc850';
-
-                x.insertCell(3);
-                tbval.rows[i].cells[3].innerHTML= data['Countries'][i-1]['TotalDeaths'];
-                tbval.rows[i].cells[3].style.background='#f36e23';
-
-                x.insertCell(4);
-                tbval.rows[i].cells[4].innerHTML= data['Countries'][i-1]['NewConfirmed'];
-                tbval.rows[i].cells[4].style.background='#4bb7d8';
-
-                x.insertCell(5);
-                tbval.rows[i].cells[5].innerHTML= data['Countries'][i-1]['NewRecovered'];
-                tbval.rows[i].cells[5].style.background='#9cc850';
-
-                x.insertCell(6);
-                tbval.rows[i].cells[6].innerHTML= data['Countries'][i-1]['NewDeaths'];
-                tbval.rows[i].cells[6].style.background='#f36e23';                
-            }
-        }
-    )
-}
-</script>
 </body>
 
 </html>
-
-
-<!-- <?php
-include 'dbcon.php';
-
-if(isset($_POST['submit'])){
-  $username=$_POST['username'];
-  $email=$_POST['email'];
-  $mobile=$_POST['mobile'];
-  $symp=$_POST['coronasymp'];
-  $msg=$_POST['message'];
-
-  $chk = "";
-  foreach($symp as $chk1){
-    $chk .= $chk1."," ;
-  }
-  $insertquery = " insert into coronacases(username, email, mobile, symptoms, message) values ('$username', '$email', '$mobile', '$chk', '$msg' )";
-  
-  $query = mysqli_query($con, $insertquery);
-  
-      if($query){
-        ?>
-        <script>
-        alert("Data inserted successfully");
-        </script>
-        <?php
-    }else{
-        ?>
-        <script>
-        alert("Data not inserted");
-        </script>
-        <?php
-    }
-}
-?> -->
-
